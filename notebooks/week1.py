@@ -1,24 +1,18 @@
-# Databricks notebook source
-# %pip install -e ..
-# %restart_python
-
-# from pathlib import Path
-# import sys
-# sys.path.append(str(Path.cwd().parent / 'src'))
+"""Contain Week 1's notebook code for the project."""
 
 # COMMAND ----------
 # Initialize installations
 
-from loguru import logger
-import yaml
-from pyspark.sql import SparkSession
 import pandas as pd
+import yaml
+from loguru import logger
+from marvelous.logging import setup_logging
+from marvelous.timer import Timer
+from pyspark.sql import SparkSession
 
 from bank_marketing.config import ProjectConfig
 from bank_marketing.data_processor import DataProcessor
 from infrastructure.volume_manager import VolumeManager
-from marvelous.logging import setup_logging
-from marvelous.timer import Timer
 
 # COMMAND ----------
 # Load configuration from YAML
