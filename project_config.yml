@@ -1,0 +1,45 @@
+prd:
+  catalog_name: mlops_prd
+  schema_name: smadhuba
+
+acc:
+  catalog_name: mlops_acc
+  schema_name: smadhuba
+
+dev:
+  catalog_name: mlops_dev
+  schema_name: smadhuba
+  volume_name: bank_marketing_dev
+
+
+experiment_name_basic: /Shared/bank-marketing-basic
+experiment_name_custom: /Shared/bank-marketing-custom
+experiment_name_fe: /Shared/house-prices-fe
+
+parameters:
+  learning_rate: 0.05
+  n_estimators: 200
+  max_depth: 4
+  random_state: 42
+
+num_features:
+  - age
+  - balance
+  - day
+  - duration
+  - campaign
+  - pdays
+  - previous
+
+cat_features:
+  - job
+  - marital
+  - education
+  - default
+  - housing
+  - loan
+  - contact
+  - month
+  - poutcome
+
+target: Target
